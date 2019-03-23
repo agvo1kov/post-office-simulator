@@ -1,0 +1,70 @@
+$footLength: 20pt
+$footWidth: 16.5pt
+$bodyHeight: 17.2pt
+$boatWidth: $footWidth
+$boatHeight: 25pt
+
+.human
+  position: absolute
+  top: 50vh
+  left: 50vh
+
+.body
+  position: relative
+  width: 48pt
+  height: $bodyHeight
+  border-radius: 5pt
+  background: #b5b5b5
+
+.head
+  position: absolute
+  top: -3.6pt
+  left: 0
+  right: 0
+
+  width: 23pt
+  height: 23pt
+
+  margin: auto
+  border-radius: 50% 50%
+  background: #3d2413
+
+.foots
+  position: relative
+  //left: (100% - 38%*2)/4
+  .foot
+    position: absolute
+
+    top: 0
+
+    width: $footWidth
+    height: $footLength
+
+    border-radius: 20pt
+    background: #005bb5
+
+  .left.foot
+    left: 4pt
+    top: -$footLength + $bodyHeight / 2
+    //top: -$footLength + $bodyHeight / 2
+
+  .right.foot
+    right: 4pt
+    top: $bodyHeight / 2
+
+.boats
+  .boat
+    position: absolute
+
+    width: $boatWidth
+    height: $boatHeight
+
+    border-radius: 50% 50% 40% 40%
+    background: black
+
+  .left.boat
+    left: 4pt
+    top: $bodyHeight / 2 - $boatHeight / 2 - $footLength + 5pt
+  .right.boat
+    right: 4pt
+    top: $bodyHeight / 2 - $boatHeight / 2 + $footLength - 10pt
