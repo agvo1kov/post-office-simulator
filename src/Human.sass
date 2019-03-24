@@ -1,12 +1,13 @@
-$footLength: 20pt
-$footWidth: 16.5pt
-$bodyHeight: 17.2pt
-$bodyWidth: 48pt
-$boatWidth: $footWidth - 3pt
-$boatHeight: 22pt
+$footLength: 20px
+$footWidth: 16.5px
+$bodyHeight: 17.2px
+$bodyWidth: 48px
+$boatWidth: $footWidth - 3px
+$boatHeight: 22px
 
-.human
+.Human
   position: absolute
+  transition: all 300ms ease-in-out
 
   top: 50vh
   left: 50vh
@@ -27,12 +28,12 @@ $boatHeight: 22pt
   position: absolute
   transition: all 200ms ease-in-out
 
-  top: -3.6pt
+  top: -3.6px
   left: 0
   right: 0
 
-  width: 23pt
-  height: 23pt
+  width: 23px
+  height: 23px
 
   margin: auto
   border-radius: 50% 50%
@@ -43,7 +44,7 @@ $boatHeight: 22pt
   //left: (100% - 38%*2)/4
   .foot
     position: absolute
-    transition: all 300ms ease-in-out
+    transition: all 290ms ease-in-out
 
     top: 0
 
@@ -55,12 +56,12 @@ $boatHeight: 22pt
     background: #0065c9
 
   .left.foot
-    left: 4pt
+    left: 4px
     //top: -$footLength + $bodyHeight / 2
     top: $bodyHeight / 2
 
   .right.foot
-    right: 4pt
+    right: 4px
     top: $bodyHeight / 2
 
 .boats
@@ -68,7 +69,7 @@ $boatHeight: 22pt
     position: absolute
     transition: all 300ms ease-in-out
 
-    top: -5pt
+    top: -5px
 
     width: $boatWidth
     height: $boatHeight
@@ -77,8 +78,8 @@ $boatHeight: 22pt
     background: #454545
 
   .left.boat
-    left: 5.5pt
+    left: 5.5px
     //top: $bodyHeight / 2 - $boatHeight / 2 - $footLength + 5pt
   .right.boat
-    right: 5.5pt
+    right: 5.5px
     //top: $bodyHeight / 2 - $boatHeight / 2 + $footLength - 10pt
