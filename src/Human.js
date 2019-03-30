@@ -5,8 +5,8 @@ class Human extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            x: 100,
-            y: 200,
+            x: 400,
+            y: 500,
             animated: true,
             leftFootOffset: 0,
             rightFootOffset: 0,
@@ -22,10 +22,12 @@ class Human extends Component {
         };
 
         setTimeout(() => {
-            this.startStep(20, () => {
-                this.continueStep(20);
+            this.startStep(10, () => {
+                this.continueStep(15, 90, 400, () => {
+
+                });
             });
-        }, 1000);
+        }, 500);
     }
 
     startStep = (distance, callback) => {
@@ -47,42 +49,41 @@ class Human extends Component {
         });
     };
 
-    continueStep = (distance, callback) => {
+    continueStep = (distance, deg, steps, callback) => {
         this.setState({
             animated: true,
-            y: this.state.y - distance,
-            leftFootOffset: -distance,
-            leftBoatOffset: -distance + this.state.boatHeight * 0.45,
-            rightFootOffset: distance + 3,
-            rightBoatOffset: distance,
+            y: this.state.y - distance * 2 * Math.sin(Human.deg2rad(deg)),
+            x: this.state.x - distance * 2 * Math.cos(Human.deg2rad(deg)),
+            leftFootOffset: this.state.leftFootOffset < 0 ? distance : -distance,
+            leftBoatOffset: this.state.leftBoatOffset < 0 ? distance : -distance, // + this.state.boatHeight * 0.45,
+            rightFootOffset: this.state.rightFootOffset < 0 ? distance : -distance,
+            rightBoatOffset: this.state.rightBoatOffset < 0 ? distance : -distance,
+            rotate: deg - 90,
         },
         () => {
             const that = this;
             setTimeout(() => {
-                // that.setState({
-                //     animated: false,
-                //     y: that.state.y - distance * 0.5,
-                //     rightFootOffset: distance + 3 + distance * 0.5,
-                //     rightBoatOffset: distance - distance,
-                //     bodyOffset: 0,
-                //     leftFootOffset: -50,
-                //     leftBoatOffset: -distance * 0.5,
-                // });
-                // setTimeout(() => {
-                //     if (typeof callback === 'function') {
-                //         callback();
-                //     }
-                // }, 500);
-            }, 500);
+                if (steps > 0) {
+                    this.continueStep(distance, deg + 10, steps - 1, callback);
+                }
+                if (typeof callback === 'function') {
+                    callback();
+                }
+            }, 300);
         });
     };
+
+    static deg2rad(degrees) {
+        return degrees * Math.PI/180;
+    }
 
     render() {
         return (
             <div className={this.state.animated ? 'Human' : 'Human non-transition'}
                 style={{
                     top: this.state.y + 'px',
-                    left: this.state.x + 'px'
+                    left: this.state.x + 'px',
+                    transform: 'rotate(' + this.state.rotate + 'deg)',
                 }}>
                 <div className="boats">
                     <div className="left boat"
