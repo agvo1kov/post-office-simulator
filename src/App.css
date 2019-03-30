@@ -9,4 +9,13 @@
   transform: rotate(180deg) !important;
 }
 
+.post-office {
+  position: absolute;
+  height: 100vh;
+  left: 200px;
+  right: 0;
+  background: url(texures/floor-light.jpg);
+  background-size: 140px;
+}
+
 /*# sourceMappingURL=App.css.map */

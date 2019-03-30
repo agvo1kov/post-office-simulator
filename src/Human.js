@@ -21,13 +21,13 @@ class Human extends Component {
             boatHeight: 22,
         };
 
-        setTimeout(() => {
-            this.startStep(10, () => {
-                this.continueStep(15, 90, 400, () => {
-
-                });
-            });
-        }, 500);
+        // setTimeout(() => {
+        //     this.startStep(10, () => {
+        //         this.continueStep(15, 90, 400, () => {
+        //
+        //         });
+        //     });
+        // }, 500);
     }
 
     startStep = (distance, callback) => {
