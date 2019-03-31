@@ -5,7 +5,7 @@ class Human extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            x: 400,
+            x: 50,
             y: 500,
             animated: true,
             leftFootOffset: 0,
@@ -21,6 +21,9 @@ class Human extends Component {
             boatWidth: 13.5,
             boatHeight: 22,
         };
+        this.goalsToAtm = [
+
+        ];
     }
 
     startStep = (distance, callback) => {
@@ -118,6 +121,7 @@ class Human extends Component {
     componentWillMount() {
         document.addEventListener('click', this.handleClick, false);
         this.startStep(15);
+
         // this.toPoint(150, 300);
     };
 
@@ -129,9 +133,7 @@ class Human extends Component {
         return (
             <div className={this.state.animated ? 'Human' : 'Human non-transition'}
                 style={{
-                    top: this.state.y + 'px',
-                    left: this.state.x + 'px',
-                    transform: 'rotate(' + this.state.rotate + 'deg)',
+                    transform: 'translate('+ this.state.x +'px, '+ this.state.y +'px) rotate(' + this.state.rotate + 'deg)',
                 }}>
                 <div className="boats">
                     <div className="left boat"
