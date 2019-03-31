@@ -21,8 +21,11 @@ class Human extends Component {
             boatWidth: 13.5,
             boatHeight: 22,
         };
-        this.goalsToAtm = [
-
+        this.goals = [
+            [120, 260],
+            [200, 250],
+            [270, 270],
+            [290, window.innerHeight - 170]
         ];
     }
 
@@ -67,16 +70,15 @@ class Human extends Component {
         });
     };
 
-    finishStep = (distance, deg, callback) => {
+    finishStep = (distance, callback) => {
         this.setState({
                 animated: true,
-                y: this.state.y - distance * Math.sin(this.deg2rad(deg + 90)),
-                x: this.state.x - distance * Math.cos(this.deg2rad(deg + 90)),
+                y: this.state.y - distance * Math.sin(this.deg2rad(this.state.rotate + 90)),
+                x: this.state.x - distance * Math.cos(this.deg2rad(this.state.rotate + 90)),
                 leftFootOffset: 0,
                 leftBoatOffset: 0, // + this.state.boatHeight * 0.45,
                 rightFootOffset: 0,
                 rightBoatOffset: 0,
-                rotate: deg,
             },
             () => {
                 setTimeout(() => {
@@ -87,17 +89,19 @@ class Human extends Component {
             });
     };
 
-    toPoint = (x, y, callback) => {
-        const deltaX = this.state.x - x;
-        const deltaY = this.state.y - y;
+    toPoint = (point, callback) => {
+        const deltaX = this.state.x - point[0];
+        const deltaY = this.state.y - point[1];
         let angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI) - 90;
 
         const dAngle = (this.state.rotate - angle) % 360;
         console.log(this.state.rotate, angle, dAngle);
-        if (dAngle > 180 && dAngle < 270) {
+        if (dAngle > 180) {
+            console.log('+');
             angle += 360;
         }
-        if (dAngle < -180 && dAngle > -270) {
+        if (dAngle < -180) {
+            console.log('-');
             angle -= 360;
         }
 
@@ -115,13 +119,34 @@ class Human extends Component {
     };
 
     handleClick = (e) => {
-        this.toPoint(e.clientX, e.clientY, 10);
+        this.toPoint([e.clientX, e.clientY], 10);
+    };
+
+    nextGoal = (callback) => {
+        if (this.goals.length > 0) {
+            this.toPoint(this.goals[0], () => {
+                this.nextGoal(callback);
+            });
+            this.goals.shift();
+        } else {
+            this.finishStep(15, () => {
+                if (typeof callback === 'function') {
+                    callback();
+                }
+            });
+        }
     };
 
     componentWillMount() {
         document.addEventListener('click', this.handleClick, false);
-        this.startStep(15);
-
+        this.startStep(15, () => {
+            this.nextGoal(() => {
+                this.goals = [[400, window.innerHeight - 200]];
+                setTimeout(() => {
+                    this.nextGoal();
+                }, 500);
+            });
+        });
         // this.toPoint(150, 300);
     };
 
