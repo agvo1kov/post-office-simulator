@@ -9,7 +9,8 @@ class App extends Component {
         super(props);
         this.state = {
             goalX: 0,
-            goalY: 0
+            goalY: 0,
+            population: 0,
         };
         window.queues = [
             [],
@@ -32,9 +33,6 @@ class App extends Component {
     componentDidMount() {
         document.addEventListener('click', this.moveGoal, false);
         setInterval(() => {
-            // this.clientItems.push(
-            //     <Human x={0} y={this.clientItems.length * (window.innerHeight * 0.8) / 4 + 200} stepDistance={15}kind="client" deg={-90} key={'client'+(this.clientItems.length+1).toString()} code={'client'+(this.clientItems.length+1).toString()}/>
-            // );
         }, 2000);
     }
 
@@ -45,11 +43,14 @@ class App extends Component {
     render() {
         const workers = [1, 2, 3, 4];
         const workerItems = workers.map((number) =>
-            <Human x={window.innerWidth - 170} y={number * (window.innerHeight * 0.8) / 4} stepDistance={15}kind="worker" deg={-90} key={'worker'+number.toString()} code={'worker'+number.toString()}/>
+            <Human x={window.innerWidth - 180} y={number * (window.innerHeight * 0.8) / 4} stepDistance={15}kind="worker" deg={-90} key={'worker'+number.toString()} code={'worker'+number.toString()}/>
         );
-        window.clients = [1, 2, 3, 4, 5];
-        this.clientItems = window.clients.map((number) =>
-            <Human x={0} y={number * (window.innerHeight * 0.8) / 4 + 200} stepDistance={15}kind="client" deg={-90} key={'client'+number.toString()} code={'client'+number.toString()}/>
+        const clients = [];
+        for (let i = 1; i < 10; i++) {
+            clients.push(i);
+        }
+        const clientItems = clients.map((number) =>
+            <Human x={0} y={number * (window.innerHeight * 0.8) / 4 * (number > 5 ? 1.5 : 1) + 200} stepDistance={15}kind="client" deg={-90} key={'client'+number.toString()} code={'client'+number.toString()}/>
         );
         return (
           <div className="App">
@@ -85,8 +86,10 @@ class App extends Component {
                     top: this.state.goalY + 'px',
                     left: this.state.goalX + 'px'
                 }}/>
-                {this.clientItems}
-                {workerItems}
+                <div id="population">
+                    {clientItems}
+                    {workerItems}
+                </div>
                 <div className="window" />
             </div>
           </div>

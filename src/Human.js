@@ -26,8 +26,10 @@ class Human extends Component {
         };
 
         if (this.props.kind === 'client') {
+            this.atmQueuePosition = window.queues[0].length;
             this.windowNumber = 0;
             this.queueLength = 0;
+            this.enteredToOffice = false;
             this.iAmGoing = false;
             this.goal = 'atm';
             this.goals = [
@@ -36,8 +38,6 @@ class Human extends Component {
                 [270, 270],
                 [290 + Math.random() * 20 - 10, window.innerHeight - 170 - window.privacySpace * window.queues[0].length]
             ];
-            this.myNumber = window.queues[0].length;
-            window.queues[0].push(this.props.code);
         }
     }
 
@@ -139,6 +139,12 @@ class Human extends Component {
 
     nextGoal = (callback) => {
         if (this.goals.length > 0) {
+            if (this.goal === 'atm' && this.goals.length === 1 && !this.enteredToOffice) {
+                this.enteredToOffice = true;
+                this.goals[0] = [290 + Math.random() * 20 - 10, window.innerHeight - 170 - window.privacySpace * window.queues[0].length];
+                this.myNumber = window.queues[0].length;
+                window.queues[0].push(this.props.code);
+            }
             this.toPoint(this.goals[0], () => {
                 this.nextGoal(callback);
             });
@@ -175,7 +181,7 @@ class Human extends Component {
         }, timeout);
     };
 
-    checkQueue = (queue) => {
+    checkQueue = (queue, serviceTime) => {
         const newNumber = queue.indexOf(this.props.code);
         // console.log(window.queues[0]);
 
@@ -185,19 +191,25 @@ class Human extends Component {
                 setTimeout(() => {
                     queue.shift();
                 }, 700);
-            }, 1500);
+            }, serviceTime);
             clearTimeout(this.queueCheckTimer);
             return;
         }
 
         if (newNumber !== this.myNumber) {
             this.myNumber = newNumber;
-            this.goals = [
-                [290 + Math.random() * 20 - 10, window.innerHeight - 170 - (window.privacySpace * this.myNumber)]
-            ];
+            if (this.goal === 'atm') {
+                this.goals = [
+                    [290 + Math.random() * 20 - 10, window.innerHeight - 170 - (window.privacySpace * this.myNumber)]
+                ];
+            } else if (this.goal === 'window') {
+                this.goals = [
+                    [window.innerWidth - 290 - window.privacySpace * this.myNumber + Math.floor(Math.random() * 5) - 10, this.windowNumber * (window.innerHeight * 0.8) / 4 + Math.floor(Math.random() * 20) - 10],
+                ];
+            }
             this.startStep(5, () => {
                 this.nextGoal(() => {
-                    this.checkQueue(queue);
+                    this.checkQueue(queue, serviceTime);
                 });
             });
             clearTimeout(this.queueCheckTimer);
@@ -206,7 +218,7 @@ class Human extends Component {
         }
 
         this.queueCheckTimer = setTimeout(() => {
-            this.checkQueue(queue);
+            this.checkQueue(queue, serviceTime);
         }, 500);
     };
 
@@ -215,7 +227,7 @@ class Human extends Component {
         switch (this.goal) {
             case 'atm':
                 this.goal = 'window';
-                const windowNumber = Math.round(Math.random() * 4);
+                const windowNumber = Math.round(Math.random() * 3 + 1);
                 console.log(windowNumber);
                 this.windowNumber = windowNumber;
 
@@ -231,7 +243,7 @@ class Human extends Component {
                 setTimeout(() => {
                     this.startStep(this.props.stepDistance, () => {
                         this.nextGoal(() => {
-                            this.checkQueue(window.queues[windowNumber]);
+                            this.checkQueue(window.queues[windowNumber], 10000);
                         });
                     });
                 }, 100);
@@ -269,7 +281,7 @@ class Human extends Component {
                 this.turnDelay = 5000;
                 this.startStep(this.props.stepDistance, () => {
                     this.nextGoal(() => {
-                        this.checkQueue(window.queues[0]);
+                        this.checkQueue(window.queues[0], 1500);
                     });
                 });
                 break;
@@ -277,6 +289,10 @@ class Human extends Component {
             case 'worker':
                 this.turnDelay = 1000;
                 this.turnNear(0);
+                // this.setState({
+                //     leftFootOffset: 30,
+                //     rightFootOffset: 30,
+                // }, () => {});
                 break;
 
             default:
