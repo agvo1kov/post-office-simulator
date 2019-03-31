@@ -28,6 +28,7 @@ class Human extends Component {
         //         });
         //     });
         // }, 500);
+        this.toPoint(10, 300);
     }
 
     startStep = (distance, callback) => {
@@ -71,6 +72,14 @@ class Human extends Component {
                 }
             }, 300);
         });
+    };
+
+    toPoint = (x, y, deg) => {
+        const deltaX = this.state.x - x;
+        const deltaY = this.state.y - y;
+        const angle = Math.atan2(deltaY, deltaX); // in radians
+
+        this.continueStep(10, 10, 2, () => {});
     };
 
     static deg2rad(degrees) {

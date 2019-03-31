@@ -13,6 +13,10 @@ class App extends Component {
             <div className="walls">
                 <div className="wall top-left" />
                 <div className="wall bottom-left" />
+                <div className="wall top" />
+                <div className="wall bottom" />
+                <div className="wall top-right" />
+                <div className="wall bottom-right" />
             </div>
         </div>
         <Human/>

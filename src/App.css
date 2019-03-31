@@ -41,15 +41,53 @@ body {
 }
 .post-office .walls .wall.bottom-left {
   left: -20px;
-  width: 35px;
+  width: 30px;
   top: 250px;
   bottom: -10px;
 }
 .post-office .walls .wall.top-left {
   left: -20px;
-  width: 35px;
+  width: 30px;
   top: -10px;
   height: 100px;
+}
+.post-office .walls .wall.bottom {
+  left: 12px;
+  right: 0;
+  bottom: 0;
+  height: 30px;
+  border-width: 1px 0 0 0;
+  border-radius: 0;
+  background-position: 14px 0;
+}
+.post-office .walls .wall.top {
+  left: 12px;
+  right: 0;
+  top: 0;
+  height: 30px;
+  border-width: 0 0 1px 0;
+  border-radius: 0;
+  background-position: 14px 0;
+}
+.post-office .walls .wall.top-right {
+  right: 13px;
+  width: 25px;
+  top: 30px;
+  bottom: 210px;
+  border-width: 0px 1px 1px 1px;
+  border-radius: 0 0 10px 10px;
+  border-color: #8c8c8c;
+  background-position: 90px 64px;
+}
+.post-office .walls .wall.bottom-right {
+  right: 13px;
+  width: 25px;
+  height: 60px;
+  bottom: 30px;
+  border-width: 1px 1px 0 1px;
+  border-radius: 10px 10px 0 0;
+  border-color: #8c8c8c;
+  background-position: 50px 64px;
 }
 
 /*# sourceMappingURL=App.css.map */
