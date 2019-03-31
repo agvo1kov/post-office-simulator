@@ -28,7 +28,8 @@ class Human extends Component {
         //         });
         //     });
         // }, 500);
-        this.toPoint(10, 300);
+        this.toPoint(150, 300);
+        this.distanceToPoint = 0;
     }
 
     startStep = (distance, callback) => {
@@ -41,7 +42,7 @@ class Human extends Component {
             rightBoatOffset: -distance,
         },
         () => {
-            const that = this;
+            // const that = this;
             setTimeout(() => {
                 if (typeof callback === 'function') {
                     callback();
@@ -53,33 +54,59 @@ class Human extends Component {
     continueStep = (distance, deg, steps, callback) => {
         this.setState({
             animated: true,
-            y: this.state.y - distance * 2 * Math.sin(Human.deg2rad(deg)),
-            x: this.state.x - distance * 2 * Math.cos(Human.deg2rad(deg)),
+            y: this.state.y - distance * 2 * Math.sin(Human.deg2rad(-deg + 180)),
+            x: this.state.x - distance * 2 * Math.cos(Human.deg2rad(-deg + 180)),
             leftFootOffset: this.state.leftFootOffset < 0 ? distance : -distance,
             leftBoatOffset: this.state.leftBoatOffset < 0 ? distance : -distance, // + this.state.boatHeight * 0.45,
             rightFootOffset: this.state.rightFootOffset < 0 ? distance : -distance,
             rightBoatOffset: this.state.rightBoatOffset < 0 ? distance : -distance,
-            rotate: deg - 90,
+            rotate: -deg + 90,
         },
         () => {
-            const that = this;
             setTimeout(() => {
                 if (steps > 0) {
-                    this.continueStep(distance, deg + 10, steps - 1, callback);
-                }
-                if (typeof callback === 'function') {
+                    this.continueStep(distance, deg, steps - 1, callback);
+                } else if (typeof callback === 'function') {
                     callback();
                 }
             }, 300);
         });
     };
 
+    finishStep = (distance, deg, callback) => {
+        this.setState({
+                animated: true,
+                y: this.state.y - distance * Math.sin(Human.deg2rad(-deg + 180)),
+                x: this.state.x - distance * Math.cos(Human.deg2rad(-deg + 180)),
+                leftFootOffset: 0,
+                leftBoatOffset: 0, // + this.state.boatHeight * 0.45,
+                rightFootOffset: 0,
+                rightBoatOffset: 0,
+                rotate: -deg + 90,
+            },
+            () => {
+                setTimeout(() => {
+                    if (typeof callback === 'function') {
+                        callback();
+                    }
+                }, 300);
+            });
+    };
+
     toPoint = (x, y, deg) => {
         const deltaX = this.state.x - x;
         const deltaY = this.state.y - y;
-        const angle = Math.atan2(deltaY, deltaX); // in radians
+        const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
 
-        this.continueStep(10, 10, 2, () => {});
+        const newDistanceToPoint = Math.sqrt( deltaX*deltaX + deltaY*deltaY);
+
+        setTimeout(() => {
+            this.startStep(1, () => {
+                this.continueStep(15, angle + 70, newDistanceToPoint / 30, () => {
+                    this.finishStep(15, angle + 70);
+                });
+            });
+        }, 10);
     };
 
     static deg2rad(degrees) {
