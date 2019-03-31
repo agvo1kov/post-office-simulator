@@ -28,6 +28,9 @@ $boatHeight: 22px
   border-radius: 5pt
   background: #f0f0f0
 
+.worker .body
+  background: #de641d
+
 .body-shadow
   z-index: 2
   position: absolute
@@ -51,10 +54,13 @@ $boatHeight: 22px
   height: $bodyHeight - 4
 
   border-radius: 3px
-  background: #fff
+  background: #f7f7f7
+
+.worker .balloon
+  background: #b3480b
 
 .head
-  z-index: 101
+  z-index: 103
   position: absolute
   transition: all 200ms ease-in-out
 
@@ -86,6 +92,7 @@ $boatHeight: 22px
     background: white
 
   .hat
+    z-index: 130
     position: absolute
 
     bottom: 0
