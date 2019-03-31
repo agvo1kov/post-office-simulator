@@ -153,14 +153,15 @@ class Human extends Component {
     turnNear = (timeout) => {
         this.rotationTimeout = setTimeout(() => {
             const span = 60;
-            this.setState({afterRotate: Math.random() * span - span / 2});
-            this.turnNear(Math.random() * this.turnDelay + 1000);
+            this.setState({afterRotate: Math.random() * span - span / 2}, () => {
+                this.turnNear(Math.random() * this.turnDelay + 1000);
+            });
         }, timeout);
     };
 
     componentDidMount() {
         document.addEventListener('click', this.handleClick, false);
-        this.setState({'rotate': this.props.deg});
+        this.setState({'rotate': this.props.deg}, () => {});
         switch (this.props.kind) {
             case 'client':
                 this.turnDelay = 5000;
@@ -208,6 +209,7 @@ class Human extends Component {
     }
 
     render() {
+        const flareAngle = this.state.rotate + this.state.afterRotate - 120;
         return (
             <div className={this.state.animated ? 'Human' : 'Human non-transition'}
                 style={{
@@ -236,9 +238,10 @@ class Human extends Component {
                 <div className="balloon" />
                 <div className="head"
                      style={{top: this.state.bodyOffset - 3.8 + 'px'}}>
+                    <div className="hat" />
                     <div className="flare"
                          style={{
-                             transform: 'rotate(-' + (this.state.rotate + this.state.afterRotate) + 'deg) translateY(-7px) rotate(90deg)'
+                             transform: 'rotate(-' + flareAngle + 'deg) translateY(-9px) rotate(90deg)'
                          }}/>
                 </div>
 

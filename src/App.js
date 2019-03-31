@@ -34,7 +34,7 @@ class App extends Component {
     render() {
         const workers = [1, 2, 3, 4];
         const workerItems = workers.map((number) =>
-            <Human x={window.innerWidth - 170} y={number * (window.innerHeight * 0.8) / 4} kind="worker" deg={-90} key={number.toString()}/>
+            <Human x={window.innerWidth - 170} y={number * (window.innerHeight * 0.8) / 4} deg={90} stepDistance={15}kind="worker" deg={-90} key={number.toString()}/>
         );
         return (
           <div className="App">

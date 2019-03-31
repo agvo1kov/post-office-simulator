@@ -39,16 +39,18 @@ $boatHeight: 22px
   box-shadow: rgba(0, 0, 0, 0.5) 0 2px 40px 4px
 
 .balloon
+  transition: all 300ms ease-in-out
   z-index: 102
   position: absolute
-  top: 10px
-  left: 2.5px
-  transition: all 300ms ease-in-out
+  top: $bodyHeight
+  left: 0
+  right: 0
+  margin: auto
 
-  width: $bodyWidth - 5
-  height: $bodyHeight
+  width: $bodyWidth - 13
+  height: $bodyHeight - 4
 
-  border-radius: 5pt
+  border-radius: 3px
   background: #fff
 
 .head
@@ -75,13 +77,27 @@ $boatHeight: 22px
     top: 10px
     left: 10px
 
-    width: 2px
+    width: 1px
     height: 4px
 
     transform: rotate(-95deg) translateY(9px) rotate(-95deg)
 
     border-radius: 100%
     background: white
+
+  .hat
+    position: absolute
+
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+
+    width: 100%
+    height: 70%
+
+    border-radius: 100%
+    background: #fafafa
 
 .foots
   position: relative

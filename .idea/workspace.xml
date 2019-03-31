@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e9b16df3-3442-4e61-9473-deea91a830f7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Human.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Human.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human.sass" afterDir="false" />
     </list>
@@ -20,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+            <state relative-caret-position="359">
+              <caret line="36" column="166" selection-start-line="36" selection-start-column="166" selection-end-line="36" selection-end-column="166" />
               <folding>
                 <element signature="e#76#95#0" expanded="true" />
               </folding>
@@ -41,14 +39,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Human.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="178" column="61" selection-start-line="178" selection-start-column="61" selection-end-line="178" selection-end-column="61" />
+            <state relative-caret-position="354">
+              <caret line="210" column="76" selection-start-line="210" selection-start-column="76" selection-end-line="210" selection-end-column="76" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-                <element signature="e#794#1306#0" />
                 <element signature="e#1364#2327#0" />
                 <element signature="e#3631#3676#0" />
                 <element signature="e#3571#3622#0" />
@@ -60,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Human.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+            <state relative-caret-position="302">
+              <caret line="79" column="12" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -82,9 +79,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/App.sass" />
+        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/Human.sass" />
         <option value="$PROJECT_DIR$/src/Human.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
       </list>
     </option>
   </component>
@@ -173,7 +170,7 @@
       <workItem from="1553552851292" duration="3557000" />
       <workItem from="1553676224858" duration="20000" />
       <workItem from="1553963853254" duration="2908000" />
-      <workItem from="1554022242389" duration="23095000" />
+      <workItem from="1554022242389" duration="24338000" />
     </task>
     <task id="LOCAL-00001" summary="human template done">
       <created>1553378780884</created>
@@ -259,11 +256,25 @@
       <option name="project" value="LOCAL" />
       <updated>1554040244486</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="first queue">
+      <created>1554060970339</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1554060970339</updated>
+    </task>
+    <task id="LOCAL-00014" summary="walking angle fixed">
+      <created>1554061237485</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1554061237485</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53762000" />
+    <option name="totallyTimeSpent" value="55005000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="799" extended-state="0" />
@@ -325,34 +336,15 @@
     <MESSAGE value="going by goals" />
     <MESSAGE value="improved accuracy of walk" />
     <MESSAGE value="first route" />
-    <option name="LAST_COMMIT_MESSAGE" value="first route" />
+    <MESSAGE value="first queue" />
+    <MESSAGE value="walking angle fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="walking angle fixed" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Human.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Human.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="178" column="61" selection-start-line="178" selection-start-column="61" selection-end-line="178" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#794#1306#0" />
-            <element signature="e#1364#2327#0" />
-            <element signature="e#3631#3676#0" />
-            <element signature="e#3571#3622#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -365,10 +357,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+        <state relative-caret-position="359">
+          <caret line="36" column="166" selection-start-line="36" selection-start-column="166" selection-end-line="36" selection-end-column="166" />
           <folding>
             <element signature="e#76#95#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Human.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="79" column="12" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Human.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="210" column="76" selection-start-line="210" selection-start-column="76" selection-end-line="210" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#1364#2327#0" />
+            <element signature="e#3631#3676#0" />
+            <element signature="e#3571#3622#0" />
           </folding>
         </state>
       </provider>
