@@ -9,6 +9,19 @@
 .App
   //transform: scale(2) translate(41vw, 6vh)
 
+body
+  overflow: hidden
+
+.street
+  position: absolute
+
+  height: 100vh
+  width: 200px
+  left: 0
+
+  background: url(texures/street-floor.jpg)
+  background-size: 165px
+
 .post-office
   position: absolute
 
@@ -16,5 +29,30 @@
   left: 200px
   right: 0
 
-  background: url(texures/floor-light.jpg)
-  background-size: 140px
+  background: url(texures/office-floor.jpg)
+  //background-size: 140px
+
+  .walls
+    .wall
+      position: absolute
+
+      border-style: solid
+      border-width: 1px 1px 1px 2px
+      border-color: #8c8c8c
+      border-left-color: #82626f
+      border-radius: 10px
+
+      background: url(texures/wall.jpg)
+      background-size: 230px
+
+    .wall.bottom-left
+      left: -20px
+      width: 35px
+      top: 250px
+      bottom: -10px
+
+    .wall.top-left
+      left: -20px
+      width: 35px
+      top: -10px
+      height: 100px

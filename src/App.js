@@ -8,7 +8,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="post-office" />
+        <div className="street" />
+        <div className="post-office">
+            <div className="walls">
+                <div className="wall top-left" />
+                <div className="wall bottom-left" />
+            </div>
+        </div>
         <Human/>
       </div>
     );
