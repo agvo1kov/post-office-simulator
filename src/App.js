@@ -13,8 +13,9 @@ class App extends Component {
         };
         window.queues = [0, 0, 0, 0, 0];
         window.privacySpace = 65;
-        // window.queueLength = (window.innerWidth - 740) / window.privacySpace;
-        window.queueLength = 3;
+        window.queueLength = Math.round((window.innerWidth - 740) / window.privacySpace);
+        console.log(window.queueLength);
+        // window.queueLength = 3;
     }
     moveGoal = (e) => {
         this.setState({

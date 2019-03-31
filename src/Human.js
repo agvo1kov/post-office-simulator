@@ -44,6 +44,7 @@ class Human extends Component {
             leftBoatOffset: distance,
             rightFootOffset: -distance - this.state.boatHeight * 0.45,
             rightBoatOffset: -distance,
+            afterRotate: 0
         },
         () => {
             // const that = this;
@@ -153,9 +154,7 @@ class Human extends Component {
         this.rotationTimeout = setTimeout(() => {
             const span = 60;
             this.setState({afterRotate: Math.random() * span - span / 2});
-            console.log(this.state.afterRotate);
             this.turnNear(Math.random() * this.turnDelay + 1000);
-            // this.ternNear(10);
         }, timeout);
     };
 
