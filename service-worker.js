@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/post-office-simulator/precache-manifest.9e75395270dc601e721d4975cee7f6f0.js"
+  "/post-office-simulator/precache-manifest.60d2510de09253df415459236957c2f1.js"
 );
 
 workbox.clientsClaim();

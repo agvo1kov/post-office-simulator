@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "2029de48b0b16b066b8f9f7c40172e29",
-    "url": "/post-office-simulator/static/media/office-floor.2029de48.jpg"
+    "revision": "01bfa6926cdfddf55b9605252d6e7efe",
+    "url": "/post-office-simulator/static/media/street-floor.01bfa692.jpg"
   },
   {
     "revision": "b9cf333f82aa5822a296",
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/post-office-simulator/static/media/wall.498c93fa.jpg"
   },
   {
-    "revision": "01bfa6926cdfddf55b9605252d6e7efe",
-    "url": "/post-office-simulator/static/media/street-floor.01bfa692.jpg"
+    "revision": "2029de48b0b16b066b8f9f7c40172e29",
+    "url": "/post-office-simulator/static/media/office-floor.2029de48.jpg"
   },
   {
     "revision": "b9cf333f82aa5822a296",
