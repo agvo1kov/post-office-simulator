@@ -7,7 +7,6 @@
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Human.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Human.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human.sass" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="210" column="20" selection-start-line="210" selection-start-column="20" selection-end-line="210" selection-end-column="20" />
+            <state relative-caret-position="1609">
+              <caret line="338" column="40" selection-start-line="338" selection-start-column="40" selection-end-line="338" selection-end-column="40" />
               <folding>
                 <element signature="e#76#95#0" expanded="true" />
                 <element signature="e#1790#3573#0" />
@@ -34,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="215" column="13" selection-start-line="215" selection-start-column="13" selection-end-line="215" selection-end-column="13" />
+            <state relative-caret-position="91">
+              <caret line="251" column="35" selection-start-line="251" selection-start-column="35" selection-end-line="251" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -46,8 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Human.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="205" column="35" lean-forward="true" selection-start-line="205" selection-start-column="35" selection-end-line="205" selection-end-column="35" />
+            <state relative-caret-position="517">
+              <caret line="292" column="33" selection-start-line="292" selection-start-column="33" selection-end-line="292" selection-end-column="33" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#1246#1832#0" />
@@ -55,12 +54,8 @@
                 <element signature="e#2853#3472#0" />
                 <element signature="e#3510#4302#0" />
                 <element signature="e#4332#4377#0" />
-                <element signature="e#4405#4465#0" />
-                <element signature="e#4497#6210#0" />
                 <element signature="e#6241#6516#0" />
-                <element signature="n#!!block;n#componentDidMount#0;n#Human#0" />
                 <element signature="n#!!block;n#componentWillUnmount#0;n#Human#0" />
-                <element signature="e#11207#11266#0" />
               </folding>
             </state>
           </provider>
@@ -69,7 +64,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Human.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
+            <state relative-caret-position="245">
               <caret line="146" column="21" selection-start-line="146" selection-start-column="21" selection-end-line="146" selection-end-column="21" />
             </state>
           </provider>
@@ -86,9 +81,18 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>console.log</find>
       <find>this.pause</find>
       <find>pause</find>
+      <find>handle</find>
+      <find>console.log</find>
+      <find>times</find>
+      <find>queues</find>
+      <find>willBeWait</find>
+      <find>window.times</find>
+      <find>checkQueue</find>
+      <find>!== this</find>
+      <find>push</find>
+      <find>willBeWait =</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -98,9 +102,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Human.sass" />
-        <option value="$PROJECT_DIR$/src/App.sass" />
         <option value="$PROJECT_DIR$/src/Human.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/App.sass" />
       </list>
     </option>
   </component>
@@ -114,25 +118,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="post-office-simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="post-office-simulator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="post-office-simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="post-office-simulator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -190,7 +176,7 @@
       <workItem from="1553676224858" duration="20000" />
       <workItem from="1553963853254" duration="2908000" />
       <workItem from="1554022242389" duration="36130000" />
-      <workItem from="1554076119139" duration="5715000" />
+      <workItem from="1554076119139" duration="14330000" />
     </task>
     <task id="LOCAL-00001" summary="human template done">
       <created>1553378780884</created>
@@ -311,11 +297,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554075337947</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="atm works">
+      <created>1554082388680</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1554082388680</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72512000" />
+    <option name="totallyTimeSpent" value="81127000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="799" extended-state="0" />
@@ -382,7 +375,8 @@
     <MESSAGE value="astronaut appearance changed" />
     <MESSAGE value="full queue cycle" />
     <MESSAGE value="full cycle and all right" />
-    <option name="LAST_COMMIT_MESSAGE" value="full cycle and all right" />
+    <MESSAGE value="atm works" />
+    <option name="LAST_COMMIT_MESSAGE" value="atm works" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -413,22 +407,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Human.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
+        <state relative-caret-position="245">
           <caret line="146" column="21" selection-start-line="146" selection-start-column="21" selection-end-line="146" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="215" column="13" selection-start-line="215" selection-start-column="13" selection-end-line="215" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Human.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="205" column="35" lean-forward="true" selection-start-line="205" selection-start-column="35" selection-end-line="205" selection-end-column="35" />
+        <state relative-caret-position="517">
+          <caret line="292" column="33" selection-start-line="292" selection-start-column="33" selection-end-line="292" selection-end-column="33" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#1246#1832#0" />
@@ -436,25 +423,28 @@
             <element signature="e#2853#3472#0" />
             <element signature="e#3510#4302#0" />
             <element signature="e#4332#4377#0" />
-            <element signature="e#4405#4465#0" />
-            <element signature="e#4497#6210#0" />
             <element signature="e#6241#6516#0" />
-            <element signature="n#!!block;n#componentDidMount#0;n#Human#0" />
             <element signature="n#!!block;n#componentWillUnmount#0;n#Human#0" />
-            <element signature="e#11207#11266#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="210" column="20" selection-start-line="210" selection-start-column="20" selection-end-line="210" selection-end-column="20" />
+        <state relative-caret-position="1609">
+          <caret line="338" column="40" selection-start-line="338" selection-start-column="40" selection-end-line="338" selection-end-column="40" />
           <folding>
             <element signature="e#76#95#0" expanded="true" />
             <element signature="e#1790#3573#0" />
             <element signature="e#1877#3190#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="251" column="35" selection-start-line="251" selection-start-column="35" selection-end-line="251" selection-end-column="35" />
         </state>
       </provider>
     </entry>

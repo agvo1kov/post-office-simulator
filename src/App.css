@@ -186,6 +186,7 @@ body {
 }
 
 .ATM > div {
+  z-index: 500;
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -212,6 +213,68 @@ body {
   cursor: pointer;
   border: #2734ab solid 3px;
   border-radius: 8px;
+}
+
+.tickets {
+  transition: all 300ms ease-in-out;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+.tickets .ticket {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 200px;
+  height: 255px;
+  font-family: monospace;
+  text-align: center;
+  background: white;
+}
+.tickets .ticket svg:nth-child(1) {
+  position: absolute;
+  top: -10px;
+  left: 0;
+}
+.tickets .ticket svg:nth-child(2) {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  transform: rotate(180deg);
+}
+.tickets .ticket .service-label {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 9pt;
+}
+.tickets .ticket .service-value {
+  font-size: 12pt;
+}
+.tickets .ticket .window-number {
+  font-size: 48pt;
+}
+.tickets .ticket .window-label {
+  font-size: 18pt;
+  position: relative;
+  top: -10px;
+}
+.tickets .ticket .ticket-number {
+  font-size: 16pt;
+  margin-top: 5px;
+}
+.tickets .ticket .wait {
+  text-align: left;
+  padding-left: 15px;
+  padding-bottom: 5px;
+}
+.tickets .ticket .queue {
+  text-align: left;
+  padding-left: 15px;
+}
+
+.tickets.outed {
+  transition: all 300ms ease-in-out;
+  transform: rotate(-20deg) translate(-200px, 50px) rotate(-20deg);
 }
 
 /*# sourceMappingURL=App.css.map */

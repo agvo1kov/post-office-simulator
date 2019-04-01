@@ -52,6 +52,8 @@ class Human extends Component {
             'send-money': 9,
             'send-documents': 8,
         };
+
+        this.chosenService = '0';
     }
 
     startStep = (distance, callback) => {
@@ -147,7 +149,8 @@ class Human extends Component {
     };
 
     handleClick = (e) => {
-        // this.toPoint([e.clientX, e.clientY], 10);
+        // console.log(e);
+        // this.setState({iAmChosen: false}, () => {});
     };
 
     nextGoal = (callback) => {
@@ -194,27 +197,39 @@ class Human extends Component {
         }, timeout);
     };
 
-    checkQueue = (queue, serviceTime) => {
+    checkQueue = (queue, times, serviceTime) => {
         const newNumber = queue.indexOf(this.props.code);
         // console.log(window.queues[0]);
 
         if (this.myNumber === 0) {
+            if (this.goal === 'atm') {
+                window.number++;
+            }
             if (this.state.iAmChosen && this.goal === 'atm') {
                 this.props.showATM((event) => {
                     console.log(event);
                     this.willBeWait = this.service[event];
-                    this.newGoal();
+                    this.chosenService = event;
                     queue.shift();
+                    times.shift();
+
+                    this.newGoal();
                 });
             } else {
+                const serviceTimer = setInterval(() => {
+                    times[0]--;
+                }, 1000);
                 setTimeout(() => {
+                    clearInterval(serviceTimer);
                     const keys = Object.keys(this.service);
-                    const randomKey = keys[Math.round(Math.random() * keys.length)];
-                    this.newGoal();
+                    const randomKey = keys[Math.floor(Math.random() * keys.length)];
                     setTimeout(() => {
+                        times.shift();
                         queue.shift();
                     }, 700);
                     this.willBeWait = this.service[randomKey];
+                    this.chosenService = randomKey;
+                    this.newGoal();
                     console.log(this.willBeWait, randomKey, this.service[randomKey]);
                 }, serviceTime);
             }
@@ -224,6 +239,7 @@ class Human extends Component {
 
         if (newNumber !== this.myNumber) {
             this.myNumber = newNumber;
+            this.props.queued(newNumber, this.props.code);
             if (this.goal === 'atm') {
                 this.goals = [
                     [290 + Math.random() * 20 - 10, window.innerHeight - 170 - (window.privacySpace * this.myNumber)]
@@ -235,7 +251,7 @@ class Human extends Component {
             }
             this.startStep(5, () => {
                 this.nextGoal(() => {
-                    this.checkQueue(queue, serviceTime);
+                    this.checkQueue(queue, times, serviceTime);
                 });
             });
             clearTimeout(this.queueCheckTimer);
@@ -244,7 +260,7 @@ class Human extends Component {
         }
 
         this.queueCheckTimer = setTimeout(() => {
-            this.checkQueue(queue, serviceTime);
+            this.checkQueue(queue, times, serviceTime);
         }, 500);
     };
 
@@ -253,6 +269,7 @@ class Human extends Component {
         switch (this.goal) {
             case 'atm':
                 this.goal = 'window';
+                this.props.windowed(this.props.code);
                 const windowNumber = Math.round(Math.random() * 3 + 1);
                 console.log(windowNumber);
                 this.windowNumber = windowNumber;
@@ -263,20 +280,22 @@ class Human extends Component {
                     [window.innerWidth - 280 - window.privacySpace * window.queues[windowNumber].length + Math.floor(Math.random() * 5) - 10, windowNumber * (window.innerHeight * 0.8) / 4 + Math.floor(Math.random() * 20) - 10],
                 ];
                 window.queues[windowNumber].push(this.props.code);
+                window.times[windowNumber].push(this.willBeWait);
                 this.myNumber = window.queues[windowNumber].indexOf(this.props.code);
-                console.log('Go!', this.myNumber);
                 this.iAmGoing = true;
                 setTimeout(() => {
                     this.startStep(this.props.stepDistance, () => {
                         this.nextGoal(() => {
-                            this.checkQueue(window.queues[windowNumber], this.willBeWait * 1000);
+                            this.checkQueue(window.queues[windowNumber], window.times[windowNumber], this.willBeWait * 1000);
                         });
                     });
                 }, 100);
+                this.props.update(this.windowNumber, this.chosenService, this.myNumber, this.props.code, this.goal);
                 break;
 
             case 'window':
                 this.goal = 'quit';
+                this.props.quited(this.props.code);
                 const newY = this.state.y + (Math.random() < 0.5 ? -1 : 1) * 80;
                 this.goals = [
                     [this.state.x, newY],
@@ -292,6 +311,7 @@ class Human extends Component {
                         });
                     });
                 }, 100);
+
                 break;
 
             default:
@@ -307,7 +327,7 @@ class Human extends Component {
                 this.turnDelay = 5000;
                 this.startStep(this.props.stepDistance, () => {
                     this.nextGoal(() => {
-                        this.checkQueue(window.queues[0], 1500);
+                        this.checkQueue(window.queues[0], window.times[0],1500);
                     });
                 });
                 break;
@@ -333,6 +353,7 @@ class Human extends Component {
 
     iAmChosen = () => {
         this.setState({iAmChosen: true}, () => {});
+        this.props.onClick(this.windowNumber, this.chosenService, this.myNumber, this.props.code, this.goal);
     };
 
     render() {
