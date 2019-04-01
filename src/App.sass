@@ -155,10 +155,20 @@ body
   right: 200px
   width: 55px
 
-  box-shadow: rgba(0, 0, 0, 0.5) 0 0 40px 0
+  //box-shadow: rgba(0, 0, 0, 0.5) 0 0 40px 0
 
   background: url(texures/window.jpg) 25px
   background-size: 80px
+
+.window-shadow
+  position: absolute
+
+  top: 31px
+  bottom: 31px
+  right: 200px
+  width: 55px
+
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 40px 0
 
 .top-stack
     position: absolute
@@ -199,3 +209,40 @@ body
   width: 50px
   height: 180px
   box-shadow: rgba(0, 0, 0, 0.4) 0 0 20px 10px
+
+.ATM > div
+  position: absolute
+
+  display: flex
+  flex-direction: row
+  justify-content: space-evenly
+  align-items: center
+  flex-wrap: wrap
+
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+  width: 800px
+  height: 600px
+
+  margin: auto
+
+  opacity: 0.9
+  background: white
+
+  .item
+    font-size: 32pt
+
+    width: 600px
+    height: 80px
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    cursor: pointer
+
+    border: #2734ab solid 3px
+    border-radius: 8px

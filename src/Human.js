@@ -17,6 +17,7 @@ class Human extends Component {
             bodyOffset: 0,
             rotate: props.deg,
             afterRotate: 0,
+            iAmChosen: false,
 
             footLength: 20,
             footWidth: 16.5,
@@ -39,6 +40,18 @@ class Human extends Component {
                 [290 + Math.random() * 20 - 10, window.innerHeight - 170 - window.privacySpace * window.queues[0].length]
             ];
         }
+
+        this.service = {
+            'pay': 10,
+            'get-mail': 7,
+            'get-box': 15,
+            'get-money': 18,
+            'get-package': 6,
+            'send-mail': 12,
+            'send-box': 25,
+            'send-money': 9,
+            'send-documents': 8,
+        };
     }
 
     startStep = (distance, callback) => {
@@ -64,24 +77,24 @@ class Human extends Component {
 
     continueStep = (distance, deg, steps, callback) => {
         this.setState({
-            animated: true,
-            y: this.state.y - distance * 2 * Math.sin(this.deg2rad(deg + 90)),
-            x: this.state.x - distance * 2 * Math.cos(this.deg2rad(deg + 90)),
-            leftFootOffset: this.state.leftFootOffset < 0 ? distance : -distance,
-            leftBoatOffset: this.state.leftBoatOffset < 0 ? distance : -distance, // + this.state.boatHeight * 0.45,
-            rightFootOffset: this.state.rightFootOffset < 0 ? distance : -distance,
-            rightBoatOffset: this.state.rightBoatOffset < 0 ? distance : -distance,
-            rotate: deg,
-        },
-        () => {
-            setTimeout(() => {
-                if (steps > 0) {
-                    this.continueStep(distance, deg, steps - 1, callback);
-                } else if (typeof callback === 'function') {
-                    callback();
-                }
-            }, 300);
-        });
+                animated: true,
+                y: this.state.y - distance * 2 * Math.sin(this.deg2rad(deg + 90)),
+                x: this.state.x - distance * 2 * Math.cos(this.deg2rad(deg + 90)),
+                leftFootOffset: this.state.leftFootOffset < 0 ? distance : -distance,
+                leftBoatOffset: this.state.leftBoatOffset < 0 ? distance : -distance, // + this.state.boatHeight * 0.45,
+                rightFootOffset: this.state.rightFootOffset < 0 ? distance : -distance,
+                rightBoatOffset: this.state.rightBoatOffset < 0 ? distance : -distance,
+                rotate: deg,
+            },
+            () => {
+                setTimeout(() => {
+                    if (steps > 0) {
+                        this.continueStep(distance, deg, steps - 1, callback);
+                    } else if (typeof callback === 'function') {
+                        callback();
+                    }
+                }, 300);
+            });
     };
 
     finishStep = (distance, callback) => {
@@ -134,7 +147,7 @@ class Human extends Component {
     };
 
     handleClick = (e) => {
-        this.toPoint([e.clientX, e.clientY], 10);
+        // this.toPoint([e.clientX, e.clientY], 10);
     };
 
     nextGoal = (callback) => {
@@ -154,7 +167,7 @@ class Human extends Component {
             if (this.iAmGoing && this.myNumber !== window.queues[this.windowNumber].indexOf(this.props.code)) {
                 this.myNumber = window.queues[this.windowNumber].indexOf(this.props.code);
                 this.goals = [
-                    [window.innerWidth - 290 - window.privacySpace * this.myNumber + Math.floor(Math.random() * 5) - 10, this.windowNumber * (window.innerHeight * 0.8) / 4 + Math.floor(Math.random() * 20) - 10],
+                    [window.innerWidth - 280 - window.privacySpace * this.myNumber + Math.floor(Math.random() * 5) - 10, this.windowNumber * (window.innerHeight * 0.8) / 4 + Math.floor(Math.random() * 20) - 10],
                 ];
                 console.log('aha', this.myNumber, window.queues[this.windowNumber].indexOf(this.props.code));
                 this.nextGoal(callback);
@@ -186,12 +199,25 @@ class Human extends Component {
         // console.log(window.queues[0]);
 
         if (this.myNumber === 0) {
-            setTimeout(() => {
-                this.newGoal();
-                setTimeout(() => {
+            if (this.state.iAmChosen && this.goal === 'atm') {
+                this.props.showATM((event) => {
+                    console.log(event);
+                    this.willBeWait = this.service[event];
+                    this.newGoal();
                     queue.shift();
-                }, 700);
-            }, serviceTime);
+                });
+            } else {
+                setTimeout(() => {
+                    const keys = Object.keys(this.service);
+                    const randomKey = keys[Math.round(Math.random() * keys.length)];
+                    this.newGoal();
+                    setTimeout(() => {
+                        queue.shift();
+                    }, 700);
+                    this.willBeWait = this.service[randomKey];
+                    console.log(this.willBeWait, randomKey, this.service[randomKey]);
+                }, serviceTime);
+            }
             clearTimeout(this.queueCheckTimer);
             return;
         }
@@ -204,7 +230,7 @@ class Human extends Component {
                 ];
             } else if (this.goal === 'window') {
                 this.goals = [
-                    [window.innerWidth - 290 - window.privacySpace * this.myNumber + Math.floor(Math.random() * 5) - 10, this.windowNumber * (window.innerHeight * 0.8) / 4 + Math.floor(Math.random() * 20) - 10],
+                    [window.innerWidth - 280 - window.privacySpace * this.myNumber + Math.floor(Math.random() * 5) - 10, this.windowNumber * (window.innerHeight * 0.8) / 4 + Math.floor(Math.random() * 20) - 10],
                 ];
             }
             this.startStep(5, () => {
@@ -233,8 +259,8 @@ class Human extends Component {
 
                 this.goals = [
                     [400, window.innerHeight - 230],
-                    [window.innerWidth - 290 - window.privacySpace * window.queueLength, windowNumber * (window.innerHeight * 0.8) / 4],
-                    [window.innerWidth - 290 - window.privacySpace * window.queues[windowNumber].length + Math.floor(Math.random() * 5) - 10, windowNumber * (window.innerHeight * 0.8) / 4 + Math.floor(Math.random() * 20) - 10],
+                    [window.innerWidth - 280 - window.privacySpace * window.queueLength, windowNumber * (window.innerHeight * 0.8) / 4],
+                    [window.innerWidth - 280 - window.privacySpace * window.queues[windowNumber].length + Math.floor(Math.random() * 5) - 10, windowNumber * (window.innerHeight * 0.8) / 4 + Math.floor(Math.random() * 20) - 10],
                 ];
                 window.queues[windowNumber].push(this.props.code);
                 this.myNumber = window.queues[windowNumber].indexOf(this.props.code);
@@ -243,7 +269,7 @@ class Human extends Component {
                 setTimeout(() => {
                     this.startStep(this.props.stepDistance, () => {
                         this.nextGoal(() => {
-                            this.checkQueue(window.queues[windowNumber], 10000);
+                            this.checkQueue(window.queues[windowNumber], this.willBeWait * 1000);
                         });
                     });
                 }, 100);
@@ -305,17 +331,25 @@ class Human extends Component {
         document.removeEventListener('click', this.handleClick, false);
     }
 
+    iAmChosen = () => {
+        this.setState({iAmChosen: true}, () => {});
+    };
+
     render() {
         const flareAngle = this.state.rotate + this.state.afterRotate - 120;
         let humanClass = 'Human';
         if (this.props.kind === 'worker') {
             humanClass += ' worker';
         }
+        if (this.state.iAmChosen) {
+            humanClass += ' chosen'
+        }
         return (
             <div className={this.state.animated ? humanClass : humanClass + ' non-transition'}
-                style={{
-                    transform: 'translate('+ this.state.x +'px, '+ this.state.y +'px) rotate(' + (this.state.rotate + this.state.afterRotate) + 'deg)',
-                }}>
+                 onClick={this.iAmChosen}
+                 style={{
+                     transform: 'translate('+ this.state.x +'px, '+ this.state.y +'px) rotate(' + (this.state.rotate + this.state.afterRotate) + 'deg)',
+                 }}>
                 <div className="boats">
                     <div className="left boat"
                         style={{top: this.state.bodyHeight / 2 - this.state.boatHeight / 2
