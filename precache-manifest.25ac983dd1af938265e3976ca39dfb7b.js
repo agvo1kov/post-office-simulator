@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "01bfa6926cdfddf55b9605252d6e7efe",
-    "url": "/post-office-simulator/static/media/street-floor.01bfa692.jpg"
+    "revision": "2029de48b0b16b066b8f9f7c40172e29",
+    "url": "/post-office-simulator/static/media/office-floor.2029de48.jpg"
   },
   {
-    "revision": "b9cf333f82aa5822a296",
+    "revision": "2d50dfd31fc9eee0c057",
     "url": "/post-office-simulator/static/css/main.c41b2583.chunk.css"
   },
   {
@@ -20,12 +20,12 @@ self.__precacheManifest = [
     "url": "/post-office-simulator/static/media/wall.498c93fa.jpg"
   },
   {
-    "revision": "2029de48b0b16b066b8f9f7c40172e29",
-    "url": "/post-office-simulator/static/media/office-floor.2029de48.jpg"
+    "revision": "01bfa6926cdfddf55b9605252d6e7efe",
+    "url": "/post-office-simulator/static/media/street-floor.01bfa692.jpg"
   },
   {
-    "revision": "b9cf333f82aa5822a296",
-    "url": "/post-office-simulator/static/js/main.cc92ec76.chunk.js"
+    "revision": "2d50dfd31fc9eee0c057",
+    "url": "/post-office-simulator/static/js/main.b07586ed.chunk.js"
   },
   {
     "revision": "394f141d84051fb82ea30be2926f88d4",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/post-office-simulator/static/media/empty-stack.31a6cd74.png"
   },
   {
-    "revision": "2b4a0feab479a6802a55d8d7b5aaf4e9",
+    "revision": "db223a19a47e9f52e8ea0b963d64e5ca",
     "url": "/post-office-simulator/index.html"
   }
 ];
