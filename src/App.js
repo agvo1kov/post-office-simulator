@@ -237,7 +237,7 @@ class App extends Component {
             <Human x={window.innerWidth - 180} y={number * (window.innerHeight * 0.8) / 4} stepDistance={15}kind="worker" deg={-90} key={'worker'+number.toString()} code={'worker'+number.toString()}/>
         );
         const clients = [];
-        for (let i = 1; i < 8; i++) {
+        for (let i = 1; i < 10; i++) {
             clients.push(i);
         }
 
@@ -251,7 +251,7 @@ class App extends Component {
                    y={number * (window.innerHeight * 0.8) / 4 * (number > 5 ? 1.5 : 1) + 200}
                    stepDistance={15}
                    kind="client"
-                   deg={-90} key={'client'+number.toString()}
+                   deg={0} key={'client'+number.toString()}
                    code={'client'+number.toString()}
                    showATM={this.showATM}
                    onClick={this.humanChosen}
