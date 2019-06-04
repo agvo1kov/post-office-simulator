@@ -29,6 +29,11 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 selectedHuman: action.payload
             };
+        case 'SERVICE':
+            return {
+                ...state,
+                serviced: state.serviced + 1
+            };
         default:
             return state
     }

@@ -231,7 +231,7 @@ class App extends Component {
         const workerItems = workers.map((number) =>
             <Human x={window.innerWidth - 180} y={number * (window.innerHeight * 0.8) / 4} stepDistance={15}kind="worker" deg={-90} key={'worker'+number.toString()} code={'worker'+number.toString()}/>
         );
-        const clients = [];
+        // const clients = [];
         // for (let i = 1; i < 20; i++) {
         //     clients.push(i);
         // }

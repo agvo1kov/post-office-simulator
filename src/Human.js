@@ -173,7 +173,7 @@ class Human extends Component {
                 this.goals = [
                     [window.innerWidth - 280 - window.privacySpace * this.myNumber + Math.floor(Math.random() * 5) - 10, this.windowNumber * (window.innerHeight * 0.8) / 4 + Math.floor(Math.random() * 20) - 10],
                 ];
-                console.log('aha', this.myNumber, window.queues[this.windowNumber].indexOf(this.props.code));
+                // console.log('aha', this.myNumber, window.queues[this.windowNumber].indexOf(this.props.code));
                 this.nextGoal(callback);
                 return;
             }
@@ -231,7 +231,7 @@ class Human extends Component {
                     this.willBeWait = this.service[randomKey];
                     this.chosenService = randomKey;
                     this.newGoal();
-                    console.log(this.willBeWait, randomKey, this.service[randomKey]);
+                    // console.log(this.willBeWait, randomKey, this.service[randomKey]);
                 }, serviceTime);
             }
             clearTimeout(this.queueCheckTimer);
@@ -272,7 +272,7 @@ class Human extends Component {
                 this.goal = 'window';
                 this.props.windowed(this.props.code);
                 const windowNumber = Math.round(Math.random() * 3 + 1);
-                console.log(windowNumber);
+                // console.log(windowNumber);
                 this.windowNumber = windowNumber;
 
                 this.goals = [
@@ -305,6 +305,7 @@ class Human extends Component {
                     [100, 125 + Math.random() * 50],
                     [Math.random() * 700 - 540, -200]
                 ];
+                this.props.service();
                 setTimeout(() => {
                     this.startStep(this.props.stepDistance, () => {
                         this.nextGoal(() => {
@@ -362,13 +363,6 @@ class Human extends Component {
 
     render() {
         const flareAngle = this.state.rotate + this.state.afterRotate - 120;
-        // let humanClass = 'Human';
-        // if (this.props.kind === 'worker') {
-        //     humanClass += ' worker';
-        // }
-        // if (this.state.iAmChosen) {
-        //     humanClass += ' chosen'
-        // }
         return (
             <div className={
                      `Human ${this.props.kind === 'worker' ? 'worker' : ''} ${this.state.animated ? '' : 'non-transition'} ${this.props.selected ? 'chosen' : ''}`
@@ -418,13 +412,16 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = dispatch => {
     return {
-        kill: (index) => dispatch({
+        kill: index => dispatch({
             type: 'KILL_HUMAN',
             payload: index
         }),
-        select: (index) => dispatch({
+        select: index => dispatch({
             type: 'SELECT_HUMAN',
             payload: index
+        }),
+        service: () => dispatch({
+            type: 'SERVICE'
         })
     }
 };

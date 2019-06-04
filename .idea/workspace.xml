@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e9b16df3-3442-4e61-9473-deea91a830f7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Human.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            <state relative-caret-position="399">
+              <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -31,8 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/reducers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+            <state relative-caret-position="712">
+              <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -40,11 +43,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3070">
-              <caret line="283" column="72" selection-start-line="283" selection-start-column="72" selection-end-line="283" selection-end-column="72" />
+            <state relative-caret-position="291">
+              <caret line="234" column="29" selection-start-line="234" selection-start-column="29" selection-end-line="234" selection-end-column="29" />
               <folding>
                 <element signature="e#76#95#0" expanded="true" />
                 <element signature="n#!!block;n#componentWillUnmount#0;n#App#0" />
+                <element signature="e#6287#7600#0" />
+                <element signature="e#8656#10376#0" />
+                <element signature="e#10389#12030#0" />
               </folding>
             </state>
           </provider>
@@ -53,8 +59,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Human.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="357" column="45" selection-start-line="357" selection-start-column="45" selection-end-line="357" selection-end-column="45" />
+            <state relative-caret-position="251">
+              <caret line="307" column="37" selection-start-line="307" selection-start-column="37" selection-end-line="307" selection-end-column="37" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -103,6 +109,8 @@
       <find>!== this</find>
       <find>push</find>
       <find>willBeWait =</find>
+      <find>clients</find>
+      <find>show</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -116,9 +124,9 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/store/actions.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/store/reducers.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/store/reducers.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/Human.js" />
       </list>
     </option>
@@ -257,7 +265,7 @@
       <workItem from="1554913350102" duration="636000" />
       <workItem from="1558157866477" duration="3138000" />
       <workItem from="1558765659990" duration="20000" />
-      <workItem from="1559570478805" duration="5277000" />
+      <workItem from="1559570478805" duration="6101000" />
     </task>
     <task id="LOCAL-00001" summary="human template done">
       <created>1553378780884</created>
@@ -420,11 +428,25 @@
       <option name="project" value="LOCAL" />
       <updated>1559636058591</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="human selection fixed">
+      <created>1559636191170</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1559636191170</updated>
+    </task>
+    <task id="LOCAL-00025" summary="atm appearance fixed">
+      <created>1559636419051</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1559636419051</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94106000" />
+    <option name="totallyTimeSpent" value="94930000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -498,7 +520,9 @@
     <MESSAGE value="yandex metrika appended" />
     <MESSAGE value="infinite human's flow added" />
     <MESSAGE value="infinite humans flow added" />
-    <option name="LAST_COMMIT_MESSAGE" value="infinite humans flow added" />
+    <MESSAGE value="human selection fixed" />
+    <MESSAGE value="atm appearance fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="atm appearance fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -550,16 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -577,28 +591,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3070">
-          <caret line="283" column="72" selection-start-line="283" selection-start-column="72" selection-end-line="283" selection-end-column="72" />
+        <state relative-caret-position="291">
+          <caret line="234" column="29" selection-start-line="234" selection-start-column="29" selection-end-line="234" selection-end-column="29" />
           <folding>
             <element signature="e#76#95#0" expanded="true" />
             <element signature="n#!!block;n#componentWillUnmount#0;n#App#0" />
+            <element signature="e#6287#7600#0" />
+            <element signature="e#8656#10376#0" />
+            <element signature="e#10389#12030#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="712">
+          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Human.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="357" column="45" selection-start-line="357" selection-start-column="45" selection-end-line="357" selection-end-column="45" />
+        <state relative-caret-position="251">
+          <caret line="307" column="37" selection-start-line="307" selection-start-column="37" selection-end-line="307" selection-end-column="37" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

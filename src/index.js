@@ -10,13 +10,14 @@ import rootReducer from './store/reducers'
 
 const store = createStore(rootReducer);
 
-const bornInterval = setInterval(() => {
+setInterval(() => {
     const rand = Math.random();
     if (store.getState().population < 20) {
         if (rand > 0.65) {
             store.dispatch({type: 'CREATE_HUMAN'});
         }
     }
+    console.log(store.getState().serviced);
     // console.log(rand, Math.round(rand));
     // console.log(store.getState().last_id, store.getState().people);
 }, 1500);
