@@ -281,6 +281,7 @@ class App extends Component {
                             x={Math.random() * 150}
                                // y={index * (window.innerHeight * 0.8) / 4 * (index > 5 ? 1.5 : 1) + 200}
                             y={window.innerHeight + 50}
+                            selected={index === this.props.selectedHuman}
                             stepDistance={15}
                             kind="client"
                             deg={0}
@@ -353,7 +354,8 @@ class App extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => ({
-    people: state.people
+    people: state.people,
+    selectedHuman: state.selectedHuman
 });
 
 export default connect(mapStateToProps, null)(App);

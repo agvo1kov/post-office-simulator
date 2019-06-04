@@ -353,21 +353,24 @@ class Human extends Component {
     // }
 
     iAmChosen = () => {
-        this.setState({iAmChosen: true}, () => {});
-        this.props.onClick(this.windowNumber, this.chosenService, this.myNumber, this.props.code, this.goal);
+        // this.setState({iAmChosen: true}, () => {});
+        // this.props.onClick(this.windowNumber, this.chosenService, this.myNumber, this.props.code, this.goal);
+        this.props.select(this.props.id);
     };
 
     render() {
         const flareAngle = this.state.rotate + this.state.afterRotate - 120;
-        let humanClass = 'Human';
-        if (this.props.kind === 'worker') {
-            humanClass += ' worker';
-        }
-        if (this.state.iAmChosen) {
-            humanClass += ' chosen'
-        }
+        // let humanClass = 'Human';
+        // if (this.props.kind === 'worker') {
+        //     humanClass += ' worker';
+        // }
+        // if (this.state.iAmChosen) {
+        //     humanClass += ' chosen'
+        // }
         return (
-            <div className={this.state.animated ? humanClass : humanClass + ' non-transition'}
+            <div className={
+                     `Human ${this.props.kind === 'worker' ? 'worder' : ''} ${this.state.animated ? '' : 'non-transition'} ${this.props.selected ? 'chosen' : ''}`
+                 }
                  onClick={this.iAmChosen}
                  style={{
                      transform: 'translate('+ this.state.x +'px, '+ this.state.y +'px) rotate(' + (this.state.rotate + this.state.afterRotate) + 'deg)',
@@ -415,6 +418,10 @@ const mapDispatchToProps = dispatch => {
     return {
         kill: (index) => dispatch({
             type: 'KILL_HUMAN',
+            payload: index
+        }),
+        select: (index) => dispatch({
+            type: 'SELECT_HUMAN',
             payload: index
         })
     }

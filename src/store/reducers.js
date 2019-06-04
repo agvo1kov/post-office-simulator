@@ -3,11 +3,11 @@ const initialState = {
     last_id: 1,
     serviced: 0,
     waitingTimeSum: 0,
+    selectedHuman: null,
     people: [1]
 };
 
 const rootReducer = (state = initialState, action) => {
-    let newState;
     switch (action.type) {
         case 'CREATE_HUMAN':
             return {
@@ -23,6 +23,11 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 population: state.population - 1,
                 people: removeByIndex(state.people, human_index)
+            };
+        case 'SELECT_HUMAN':
+            return {
+                ...state,
+                selectedHuman: action.payload
             };
         default:
             return state
