@@ -3,6 +3,8 @@ const initialState = {
     last_id: 1,
     serviced: 0,
     waitingTimeSum: 0,
+    maxQueueLength: 0,
+    processingTime: 0,
     selectedHuman: null,
     people: [1]
 };
@@ -33,6 +35,20 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
                 serviced: state.serviced + 1
+            };
+        case 'UPDATE_MAX_QUEUE_LENGTH':
+            if (action.payload > state.maxQueueLength) {
+                return {
+                    ...state,
+                    maxQueueLength: action.payload
+                };
+            } else {
+                return state;
+            }
+        case 'ADD_PROCESSING_TIME':
+            return {
+                ...state,
+                processingTime: state.processingTime + action.payload
             };
         default:
             return state

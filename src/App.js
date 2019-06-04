@@ -167,6 +167,7 @@ class App extends Component {
             for (let i = 0; i < this.myNumber + 1; i++) {
                 waitFor += window.times[windowNumber][i];
             }
+            waitFor -= window.times[windowNumber][this.myNumber];
 
             const minutes = Math.floor(waitFor / 60);
             const seconds = waitFor % 60;
@@ -347,6 +348,9 @@ class App extends Component {
                     <div className="wait">Ждать: <span id="wait-for" className="stm1">{this.state.waitForMinutes} м. {this.state.waitForSeconds} сек.</span></div>
                     <div className="queue">Очередь: <span id="queue-length" className="stm2">{this.state.queueLength} чел.</span></div>
                 </div>
+            </div>
+            <div className="stats">
+                Stats
             </div>
           </div>
         );

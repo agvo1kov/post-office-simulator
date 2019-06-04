@@ -17,7 +17,7 @@ setInterval(() => {
             store.dispatch({type: 'CREATE_HUMAN'});
         }
     }
-    console.log(store.getState().serviced);
+    console.log(store.getState().serviced, store.getState().maxQueueLength, store.getState().processingTime);
     // console.log(rand, Math.round(rand));
     // console.log(store.getState().last_id, store.getState().people);
 }, 1500);

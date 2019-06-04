@@ -19,6 +19,7 @@ class Human extends Component {
             rotate: props.deg,
             afterRotate: 0,
             iAmChosen: false,
+            timeForWait: 0,
 
             footLength: 20,
             footWidth: 16.5,
@@ -201,6 +202,9 @@ class Human extends Component {
     checkQueue = (queue, times, serviceTime) => {
         const newNumber = queue.indexOf(this.props.code);
         // console.log(window.queues[0]);
+        if (queue.length > this.props.maxQueueLength) {
+            this.props.updateMaxQueueLength(queue.length);
+        }
 
         if (this.myNumber === 0) {
             if (this.goal === 'atm') {
@@ -296,6 +300,7 @@ class Human extends Component {
 
             case 'window':
                 this.goal = 'quit';
+                this.props.addProcessingTime(this.willBeWait);
                 this.props.quited(this.props.code);
                 const newY = this.state.y + (Math.random() < 0.5 ? -1 : 1) * 80;
                 this.goals = [
@@ -407,7 +412,8 @@ class Human extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => ({
-    people: state.people
+    people: state.people,
+    maxQueueLength: state.maxQueueLength
 });
 
 const mapDispatchToProps = dispatch => {
@@ -422,7 +428,15 @@ const mapDispatchToProps = dispatch => {
         }),
         service: () => dispatch({
             type: 'SERVICE'
-        })
+        }),
+        updateMaxQueueLength: value => dispatch({
+            type: 'UPDATE_MAX_QUEUE_LENGTH',
+            payload: value
+        }),
+        addProcessingTime: time => dispatch({
+            type: 'ADD_PROCESSING_TIME',
+            payload: time
+        }),
     }
 };
 
