@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/post-office-simulator/precache-manifest.f79afd012e693546cd4f336291073202.js"
+  "/post-office-simulator/precache-manifest.ca4d482897af2e3118890900309ae91c.js"
 );
 
 self.addEventListener('message', (event) => {
