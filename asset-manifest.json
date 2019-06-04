@@ -1,14 +1,16 @@
 {
-  "main.css": "/post-office-simulator/static/css/main.c41b2583.chunk.css",
-  "main.js": "/post-office-simulator/static/js/main.b07586ed.chunk.js",
-  "main.js.map": "/post-office-simulator/static/js/main.b07586ed.chunk.js.map",
-  "runtime~main.js": "/post-office-simulator/static/js/runtime~main.236d829a.js",
-  "runtime~main.js.map": "/post-office-simulator/static/js/runtime~main.236d829a.js.map",
-  "static/js/2.88ea1fd6.chunk.js": "/post-office-simulator/static/js/2.88ea1fd6.chunk.js",
-  "static/js/2.88ea1fd6.chunk.js.map": "/post-office-simulator/static/js/2.88ea1fd6.chunk.js.map",
-  "index.html": "/post-office-simulator/index.html",
-  "precache-manifest.25ac983dd1af938265e3976ca39dfb7b.js": "/post-office-simulator/precache-manifest.25ac983dd1af938265e3976ca39dfb7b.js",
-  "service-worker.js": "/post-office-simulator/service-worker.js",
-  "static/css/main.c41b2583.chunk.css.map": "/post-office-simulator/static/css/main.c41b2583.chunk.css.map",
-  "static/media/App.css": "/post-office-simulator/static/media/window.79d953a6.jpg"
+  "files": {
+    "main.css": "/post-office-simulator/static/css/main.8e41f01a.chunk.css",
+    "main.js": "/post-office-simulator/static/js/main.edbcc491.chunk.js",
+    "main.js.map": "/post-office-simulator/static/js/main.edbcc491.chunk.js.map",
+    "runtime~main.js": "/post-office-simulator/static/js/runtime~main.236d829a.js",
+    "runtime~main.js.map": "/post-office-simulator/static/js/runtime~main.236d829a.js.map",
+    "static/js/2.67b6ed41.chunk.js": "/post-office-simulator/static/js/2.67b6ed41.chunk.js",
+    "static/js/2.67b6ed41.chunk.js.map": "/post-office-simulator/static/js/2.67b6ed41.chunk.js.map",
+    "index.html": "/post-office-simulator/index.html",
+    "precache-manifest.f79afd012e693546cd4f336291073202.js": "/post-office-simulator/precache-manifest.f79afd012e693546cd4f336291073202.js",
+    "service-worker.js": "/post-office-simulator/service-worker.js",
+    "static/css/main.8e41f01a.chunk.css.map": "/post-office-simulator/static/css/main.8e41f01a.chunk.css.map",
+    "static/media/App.css": "/post-office-simulator/static/media/window.79d953a6.jpg"
+  }
 }
