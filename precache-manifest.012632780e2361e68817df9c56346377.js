@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "34c8d1c8c170415f132c945994617689",
+    "revision": "c607a88b719c59d5f3587a6d40fae1dd",
     "url": "/post-office-simulator/index.html"
   },
   {
-    "revision": "1989d0a771120c9113dc",
+    "revision": "3a85787e1a8c198bdd57",
     "url": "/post-office-simulator/static/css/main.8e41f01a.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/post-office-simulator/static/js/2.9274e7a0.chunk.js"
   },
   {
-    "revision": "1989d0a771120c9113dc",
-    "url": "/post-office-simulator/static/js/main.7b206628.chunk.js"
+    "revision": "3a85787e1a8c198bdd57",
+    "url": "/post-office-simulator/static/js/main.2da5378f.chunk.js"
   },
   {
     "revision": "75d37ce01b2845e0fb42",
