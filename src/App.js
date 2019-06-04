@@ -349,7 +349,7 @@ class App extends Component {
                     </svg>
                     <div className="service-label">Услуга:</div>
                     <span id="service-kind" className="service-value">{this.state.service}</span>
-                    <div className="ticket-number">Бумажка №<span id="ticket-number">{this.state.ticketNumber}</span></div>
+                    <div className="ticket-number">Талон №<span id="ticket-number">{this.state.ticketNumber}</span></div>
                     <div id="window-number" className="window-number">{this.state.windowNumber}</div>
                     <div className="window-label">окно</div>
                     <div className="wait">Ждать: <span id="wait-for" className="stm1">{this.state.waitForMinutes} м. {this.state.waitForSeconds} сек.</span></div>
