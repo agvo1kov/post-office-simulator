@@ -2,7 +2,6 @@ const initialState = {
     population: 1,
     last_id: 1,
     serviced: 0,
-    waitingTimeSum: 0,
     maxQueueLength: 0,
     processingTime: 0,
     selectedHuman: null,

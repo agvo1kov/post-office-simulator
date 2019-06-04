@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e9b16df3-3442-4e61-9473-deea91a830f7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/reducers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="18" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="18" />
+            <state relative-caret-position="177">
+              <caret line="7" column="10" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -42,13 +40,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="371" column="18" selection-start-line="371" selection-start-column="18" selection-end-line="371" selection-end-column="18" />
+            <state relative-caret-position="46">
+              <caret line="285" column="36" selection-start-line="285" selection-start-column="36" selection-end-line="285" selection-end-column="36" />
               <folding>
                 <element signature="e#76#95#0" expanded="true" />
                 <element signature="n#!!block;n#componentWillUnmount#0;n#App#0" />
                 <element signature="e#6287#7600#0" />
-                <element signature="e#8656#10376#0" />
               </folding>
             </state>
           </provider>
@@ -57,7 +54,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Human.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
+            <state relative-caret-position="8673">
               <caret line="413" selection-start-line="413" selection-end-line="416" selection-end-column="3" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -69,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="349" lean-forward="true" selection-start-line="349" selection-end-line="349" />
+            <state relative-caret-position="423">
+              <caret line="348" column="17" selection-start-line="348" selection-start-column="17" selection-end-line="348" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -124,11 +121,11 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/store/actions.js" />
-        <option value="$PROJECT_DIR$/src/store/reducers.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/Human.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/App.sass" />
+        <option value="$PROJECT_DIR$/src/store/reducers.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
       </list>
     </option>
   </component>
@@ -266,7 +263,7 @@
       <workItem from="1554913350102" duration="636000" />
       <workItem from="1558157866477" duration="3138000" />
       <workItem from="1558765659990" duration="20000" />
-      <workItem from="1559570478805" duration="9793000" />
+      <workItem from="1559570478805" duration="10567000" />
     </task>
     <task id="LOCAL-00001" summary="human template done">
       <created>1553378780884</created>
@@ -457,11 +454,25 @@
       <option name="project" value="LOCAL" />
       <updated>1559639506484</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="stats displaying add">
+      <created>1559641140860</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1559641140860</updated>
+    </task>
+    <task id="LOCAL-00029" summary="bumaschka to talon ranamed">
+      <created>1559643632337</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1559643632338</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98622000" />
+    <option name="totallyTimeSpent" value="99396000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -474,7 +485,7 @@
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32923833" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32923833" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39942113" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -512,8 +523,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="first step :)" />
-    <MESSAGE value="second step :)" />
     <MESSAGE value="manikin turns :)" />
     <MESSAGE value="floor" />
     <MESSAGE value="first textures" />
@@ -537,7 +546,9 @@
     <MESSAGE value="atm appearance fixed" />
     <MESSAGE value="serviced people counting added" />
     <MESSAGE value="stats added" />
-    <option name="LAST_COMMIT_MESSAGE" value="stats added" />
+    <MESSAGE value="stats displaying add" />
+    <MESSAGE value="bumaschka to talon ranamed" />
+    <option name="LAST_COMMIT_MESSAGE" value="bumaschka to talon ranamed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -611,14 +622,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store/reducers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="18" />
+        <state relative-caret-position="177">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="285" column="36" selection-start-line="285" selection-start-column="36" selection-end-line="285" selection-end-column="36" />
+          <folding>
+            <element signature="e#76#95#0" expanded="true" />
+            <element signature="n#!!block;n#componentWillUnmount#0;n#App#0" />
+            <element signature="e#6287#7600#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Human.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
+        <state relative-caret-position="8673">
           <caret line="413" selection-start-line="413" selection-end-line="416" selection-end-column="3" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -626,23 +649,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="371" column="18" selection-start-line="371" selection-start-column="18" selection-end-line="371" selection-end-column="18" />
-          <folding>
-            <element signature="e#76#95#0" expanded="true" />
-            <element signature="n#!!block;n#componentWillUnmount#0;n#App#0" />
-            <element signature="e#6287#7600#0" />
-            <element signature="e#8656#10376#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="349" lean-forward="true" selection-start-line="349" selection-end-line="349" />
+        <state relative-caret-position="423">
+          <caret line="348" column="17" selection-start-line="348" selection-start-column="17" selection-end-line="348" selection-end-column="17" />
         </state>
       </provider>
     </entry>
