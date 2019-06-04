@@ -206,7 +206,7 @@ class Human extends Component {
             if (this.goal === 'atm') {
                 window.number++;
             }
-            if (this.state.iAmChosen && this.goal === 'atm') {
+            if (this.props.selected && this.goal === 'atm') {
                 this.props.showATM((event) => {
                     console.log(event);
                     this.willBeWait = this.service[event];
