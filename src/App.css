@@ -26,7 +26,7 @@ body {
   height: 100vh;
   width: 200px;
   left: 0;
-  background: url(texures/street-floor.jpg);
+  background: url(textures/street-floor.jpg);
   background-size: 165px;
 }
 
@@ -35,7 +35,7 @@ body {
   height: 100vh;
   left: 200px;
   right: 0;
-  background: url(texures/office-floor.jpg);
+  background: url(textures/office-floor.jpg);
   background-size: 340px;
 }
 .post-office .walls .wall {
@@ -45,7 +45,7 @@ body {
   border-color: #8c8c8c;
   border-left-color: #82626f;
   border-radius: 10px;
-  background: url(texures/wall.jpg);
+  background: url(textures/wall.jpg);
   background-size: 230px;
 }
 .post-office .walls .wall.bottom-left {
@@ -107,7 +107,7 @@ body {
   left: 50px;
   width: 90px;
   height: 90px;
-  background: url(texures/atm.jpg) no-repeat center;
+  background: url(textures/atm.jpg) no-repeat center;
   background-size: contain;
   transform: rotate(180deg);
 }
@@ -136,7 +136,7 @@ body {
   bottom: 31px;
   right: 200px;
   width: 55px;
-  background: url(texures/window.jpg) 25px;
+  background: url(textures/window.jpg) 25px;
   background-size: 80px;
 }
 
@@ -155,7 +155,7 @@ body {
   right: 35px;
   width: 80px;
   height: 200px;
-  background: url(texures/empty-stack.png) no-repeat center;
+  background: url(textures/empty-stack.png) no-repeat center;
   background-size: contain;
 }
 
@@ -173,7 +173,7 @@ body {
   right: 35px;
   width: 80px;
   height: 200px;
-  background: url(texures/stack.png) no-repeat center;
+  background: url(textures/stack.png) no-repeat center;
   background-size: contain;
 }
 

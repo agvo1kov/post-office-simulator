@@ -3,7 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="e9b16df3-3442-4e61-9473-deea91a830f7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/texures/atm.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/textures/atm.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/texures/empty-stack.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/textures/empty-stack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/texures/floor-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/textures/floor-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/texures/floor-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/textures/floor-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/texures/floor-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/textures/floor-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/texures/floor-light.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/textures/floor-light.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/texures/floor-light2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/textures/floor-light2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/texures/floor-light3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/textures/floor-light3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/texures/floor.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/textures/floor.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/texures/office-floor.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/textures/office-floor.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/texures/stack.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/textures/stack.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/texures/stack.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/textures/stack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/texures/street-floor.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/textures/street-floor.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/texures/wall.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/textures/wall.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/texures/wall2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/textures/wall2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/texures/window.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/textures/window.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/texures/window.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/textures/window.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="19" column="107" selection-start-line="19" selection-start-column="107" selection-end-line="19" selection-end-column="107" />
+            <state relative-caret-position="385">
+              <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -63,7 +82,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.sass">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="423">
@@ -121,11 +140,11 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/store/actions.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/Human.js" />
-        <option value="$PROJECT_DIR$/src/App.sass" />
         <option value="$PROJECT_DIR$/src/store/reducers.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/App.sass" />
+        <option value="$PROJECT_DIR$/src/index.js" />
       </list>
     </option>
   </component>
@@ -161,6 +180,12 @@
               <item name="post-office-simulator" type="b2602c69:ProjectViewProjectNode" />
               <item name="post-office-simulator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="post-office-simulator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="post-office-simulator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="post-office-simulator" type="b2602c69:ProjectViewProjectNode" />
@@ -263,7 +288,7 @@
       <workItem from="1554913350102" duration="636000" />
       <workItem from="1558157866477" duration="3138000" />
       <workItem from="1558765659990" duration="20000" />
-      <workItem from="1559570478805" duration="10567000" />
+      <workItem from="1559570478805" duration="10898000" />
     </task>
     <task id="LOCAL-00001" summary="human template done">
       <created>1553378780884</created>
@@ -468,11 +493,32 @@
       <option name="project" value="LOCAL" />
       <updated>1559643632338</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="image added">
+      <created>1559654556326</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1559654556326</updated>
+    </task>
+    <task id="LOCAL-00031" summary="image added">
+      <created>1559654664293</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1559654664293</updated>
+    </task>
+    <task id="LOCAL-00032" summary="textures added">
+      <created>1559654948539</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1559654948539</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99396000" />
+    <option name="totallyTimeSpent" value="99727000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -485,7 +531,7 @@
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32923833" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32923833" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39942113" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -523,8 +569,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="manikin turns :)" />
-    <MESSAGE value="floor" />
     <MESSAGE value="first textures" />
     <MESSAGE value="textures improved" />
     <MESSAGE value="going to first goal" />
@@ -548,7 +592,9 @@
     <MESSAGE value="stats added" />
     <MESSAGE value="stats displaying add" />
     <MESSAGE value="bumaschka to talon ranamed" />
-    <option name="LAST_COMMIT_MESSAGE" value="bumaschka to talon ranamed" />
+    <MESSAGE value="image added" />
+    <MESSAGE value="textures added" />
+    <option name="LAST_COMMIT_MESSAGE" value="textures added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -610,16 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="107" selection-start-line="19" selection-start-column="107" selection-end-line="19" selection-end-column="107" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/reducers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
@@ -653,6 +689,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
           <caret line="348" column="17" selection-start-line="348" selection-start-column="17" selection-end-line="348" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
