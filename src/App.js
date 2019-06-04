@@ -4,6 +4,8 @@ import './App.css';
 import './Human';
 import Human from "./Human";
 
+import { connect } from 'react-redux'
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -47,17 +49,10 @@ class App extends Component {
         });
     };
     componentDidMount() {
-        document.addEventListener('click', this.moveGoal, false);
-        // this.showATM();
-
-        setInterval(() => {
-            // window.times = window.times.map((i) => {
-            //     return i.map((sec) => {
-            //         return sec > 0 ? sec - 1 : 0;
-            //     });
-            // });
-            console.log(window.times);
-        }, 1000);
+        // document.addEventListener('click', this.moveGoal, false);
+        // setInterval(() => {
+        //     console.log(window.times);
+        // }, 1000);
     }
 
     componentWillUnmount() {
@@ -237,30 +232,15 @@ class App extends Component {
             <Human x={window.innerWidth - 180} y={number * (window.innerHeight * 0.8) / 4} stepDistance={15}kind="worker" deg={-90} key={'worker'+number.toString()} code={'worker'+number.toString()}/>
         );
         const clients = [];
-        for (let i = 1; i < 10; i++) {
-            clients.push(i);
-        }
+        // for (let i = 1; i < 20; i++) {
+        //     clients.push(i);
+        // }
 
         let ticketClass = "tickets";
         if (this.state.goal !== 'window') {
             ticketClass += " outed";
         }
 
-        const clientItems = clients.map((number) =>
-            <Human x={0}
-                   y={number * (window.innerHeight * 0.8) / 4 * (number > 5 ? 1.5 : 1) + 200}
-                   stepDistance={15}
-                   kind="client"
-                   deg={0} key={'client'+number.toString()}
-                   code={'client'+number.toString()}
-                   showATM={this.showATM}
-                   onClick={this.humanChosen}
-                   queued={this.queued}
-                   quited={this.quited}
-                   windowed={this.windowed}
-                   update={this.updateMe}
-            />
-        );
         return (
           <div className="App">
             <div className="workspace">
@@ -294,12 +274,26 @@ class App extends Component {
                     <div className="bottom-stack shadow" />
                     <div className="bottom-stack" />
                 </div>
-                {/*<div className="goal" style={{*/}
-                    {/*top: this.state.goalY + 'px',*/}
-                    {/*left: this.state.goalX + 'px'*/}
-                {/*}}/>*/}
                 <div id="population">
-                    {clientItems}
+                    { this.props.people.map((index) => (
+                        <Human
+                            id={index}
+                            x={Math.random() * 150}
+                               // y={index * (window.innerHeight * 0.8) / 4 * (index > 5 ? 1.5 : 1) + 200}
+                            y={window.innerHeight + 50}
+                            stepDistance={15}
+                            kind="client"
+                            deg={0}
+                            key={'client'+index.toString()}
+                            code={'client'+index.toString()}
+                            showATM={this.showATM}
+                            onClick={this.humanChosen}
+                            queued={this.queued}
+                            quited={this.quited}
+                            windowed={this.windowed}
+                            update={this.updateMe}
+                        />
+                    )) }
                     {workerItems}
                 </div>
                 <div className="window" />
@@ -358,4 +352,8 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state, ownProps) => ({
+    people: state.people
+});
+
+export default connect(mapStateToProps, null)(App);

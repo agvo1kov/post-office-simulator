@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import './Human.css'
+import { connect } from 'react-redux'
 
 class Human extends Component {
     deg;
@@ -307,7 +308,7 @@ class Human extends Component {
                 setTimeout(() => {
                     this.startStep(this.props.stepDistance, () => {
                         this.nextGoal(() => {
-
+                            this.props.kill(this.props.id);
                         });
                     });
                 }, 100);
@@ -347,9 +348,9 @@ class Human extends Component {
         // this.toPoint(150, 300);
     };
 
-    componentWillUnmount() {
-        document.removeEventListener('click', this.handleClick, false);
-    }
+    // componentWillUnmount() {
+    //     document.removeEventListener('click', this.handleClick, false);
+    // }
 
     iAmChosen = () => {
         this.setState({iAmChosen: true}, () => {});
@@ -406,4 +407,17 @@ class Human extends Component {
     }
 }
 
-export default Human;
+const mapStateToProps = (state, ownProps) => ({
+    people: state.people
+});
+
+const mapDispatchToProps = dispatch => {
+    return {
+        kill: (index) => dispatch({
+            type: 'KILL_HUMAN',
+            payload: index
+        })
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Human)
