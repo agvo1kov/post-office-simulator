@@ -354,8 +354,10 @@ class Human extends Component {
 
     iAmChosen = () => {
         // this.setState({iAmChosen: true}, () => {});
-        // this.props.onClick(this.windowNumber, this.chosenService, this.myNumber, this.props.code, this.goal);
-        this.props.select(this.props.id);
+        if (this.props.kind !== 'worker') {
+            this.props.onClick(this.windowNumber, this.chosenService, this.myNumber, this.props.code, this.goal);
+            this.props.select(this.props.id);
+        }
     };
 
     render() {
@@ -369,7 +371,7 @@ class Human extends Component {
         // }
         return (
             <div className={
-                     `Human ${this.props.kind === 'worker' ? 'worder' : ''} ${this.state.animated ? '' : 'non-transition'} ${this.props.selected ? 'chosen' : ''}`
+                     `Human ${this.props.kind === 'worker' ? 'worker' : ''} ${this.state.animated ? '' : 'non-transition'} ${this.props.selected ? 'chosen' : ''}`
                  }
                  onClick={this.iAmChosen}
                  style={{
