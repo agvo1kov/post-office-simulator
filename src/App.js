@@ -21,6 +21,7 @@ class App extends Component {
             queueLength: 0,
             waitForMinutes: 0,
             waitForSeconds: 0,
+            displayStat: false
         };
         window.number = 0;
         window.queues = [
@@ -227,6 +228,12 @@ class App extends Component {
       }
     };
 
+    toggleStats = () => {
+        this.setState({
+            displayStat: !this.state.displayStat
+        });
+    };
+
     render() {
         const workers = [1, 2, 3, 4];
         const workerItems = workers.map((number) =>
@@ -349,8 +356,19 @@ class App extends Component {
                     <div className="queue">Очередь: <span id="queue-length" className="stm2">{this.state.queueLength} чел.</span></div>
                 </div>
             </div>
-            <div className="stats">
-                Stats
+            <div className="stats_box">
+                <div className={`stats ${this.state.displayStat ? '' : 'collapsed'}`}>
+                    <div className={`info ${this.state.displayStat ? '' : 'hidden'}`}>
+                        <h1>Статистика</h1>
+                        <h2>Обслужено клиентов:</h2>
+                        <div className="stat_value">{this.props.serviced}</div>
+                        <h2>Max. длина оч-ди:</h2>
+                        <div className="stat_value">{this.props.maxQueueLength}</div>
+                        <h2>Общее t обслуж.:</h2>
+                        <div className="stat_value">{this.props.processingTime}</div>
+                    </div>
+                    <div className="button" onClick={this.toggleStats}>Stats</div>
+                </div>
             </div>
           </div>
         );
@@ -359,7 +377,10 @@ class App extends Component {
 
 const mapStateToProps = (state, ownProps) => ({
     people: state.people,
-    selectedHuman: state.selectedHuman
+    selectedHuman: state.selectedHuman,
+    serviced: state.serviced,
+    maxQueueLength: state.maxQueueLength,
+    processingTime: state.processingTime
 });
 
 export default connect(mapStateToProps, null)(App);

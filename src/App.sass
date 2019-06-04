@@ -316,11 +316,75 @@ body
   transition: all 300ms ease-in-out
   transform: rotate(-20deg) translate(-200px, 50px) rotate(-20deg)
 
-.stats
+.hidden
+  opacity: 0
+  transition: all 100ms ease-in-out
+
+.stats_box
   position: absolute
-  right: 0
+  right: 40px
   bottom: 30px
   top: 30px
+  width: 215px
 
-  width: 100px
-  background: black
+  .stats
+    transition: all 200ms ease-in-out
+    position: absolute
+    right: 0
+    bottom: 0
+    //top: 0
+    height: 100%
+    overflow: hidden
+
+    width: 215px
+    background: #1a2640
+    font-family: sans-serif
+
+    color: white
+    text-align: center
+    &.collapsed
+      transition: all 200ms ease-in-out
+      height: 55px
+      width: 160px
+      //top: auto
+
+    .info
+      transition: all 100ms ease-in-out
+      position: absolute
+      top: 0
+      bottom: 70px
+      text-align: center
+      left: 0
+      right: 0
+
+      display: flex
+      flex-flow: column nowrap
+      justify-content: space-around
+      align-items: center
+
+
+    h2
+      font-weight: 100
+      font-size: 14pt
+      line-height: 1pt
+
+    .stat_value
+      font-size: 50pt
+      margin-bottom: 50px
+
+    .button
+      position: absolute
+      bottom: 7px
+      right: 10px
+      left: 10px
+
+      padding: 4px 0
+      font-family: monospace
+      text-align: center
+      border: 1px solid white
+      color: white
+      font-size: 20pt
+      background: transparent
+      cursor: pointer
+      user-select: none
+      -webkit-user-select: none
