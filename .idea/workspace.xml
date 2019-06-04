@@ -205,7 +205,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.deploy">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
